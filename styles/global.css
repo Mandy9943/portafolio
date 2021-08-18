@@ -26,4 +26,6 @@ ul {
 
 body {
   font-family: Calibri;
+  color: rgba(0, 0, 0, 0.75);
+  background-color: silver;
 }

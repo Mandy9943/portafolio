@@ -2,8 +2,10 @@ import Head from "next/head";
 import Link from "next/link";
 import styled from "styled-components";
 import RegularButtom from "../components/Button/RegularButtom";
+import Experience from "../components/ExperienceSection/Experience";
 import Layout from "../components/Layout/Layout";
-import Skills from "../components/Skills/Skills";
+import Skills from "../components/SkillsSection/Skills";
+import TextSection from "../components/TextSection/TextSection";
 const name = " Armando Cesar Martin Calderon";
 
 export default function Home() {
@@ -40,7 +42,11 @@ export default function Home() {
         <ContentLeftS>
           <Skills />
         </ContentLeftS>
-        <ContentRigthS></ContentRigthS>
+        <ContentRigthS>
+          <Experience />
+          <TextSection title="Objetivos" faIcon="home" />
+          <TextSection title="Informacion Adicional" faIcon="plus" />
+        </ContentRigthS>
       </ContentS>
     </Layout>
   );
@@ -55,7 +61,6 @@ const NameS = styled.div`
 const InfoSectionS = styled.div`
   width: 100%;
   display: flex;
-  color: var(--dark);
 `;
 const ImageBox = styled.div`
   display: flex;
@@ -84,7 +89,9 @@ const ContentS = styled.div`
 `;
 const ContentLeftS = styled.div`
   flex: 33%;
+  padding: 20px;
 `;
 const ContentRigthS = styled.div`
   flex: 66%;
+  padding: 20px 0 20px 20px;
 `;

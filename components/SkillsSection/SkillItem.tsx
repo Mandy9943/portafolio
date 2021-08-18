@@ -20,5 +20,4 @@ export default SkillItem;
 
 const SkillItemS = styled.div`
   margin-bottom: 8px;
-  color: gray;
 `;

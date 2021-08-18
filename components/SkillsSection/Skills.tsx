@@ -5,9 +5,14 @@ import SkillItem from "./SkillItem";
 const Skills = () => {
   return (
     <SkillsS>
-      <SectionTitle title="Habilidades" faIcon="rocket" />
+      <SectionTitle title="Habilidades" faIcon="rocket" noLine />
 
       <ListSkillsS>
+        <SkillItem />
+        <SkillItem />
+        <SkillItem />
+        <SkillItem />
+        <SkillItem />
         <SkillItem />
         <SkillItem />
         <SkillItem />
@@ -27,7 +32,6 @@ export default Skills;
 
 const SkillsS = styled.div`
   width: 100%;
-  padding: 20px 10px;
 `;
 const ListSkillsS = styled.div`
   width: 100%;
