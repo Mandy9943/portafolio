@@ -6,12 +6,14 @@
 
 :root {
   --primary: #034ea2;
+  --secondary: #001aff;
   --dark: #282828;
-  --light: #bebebe;
+  --light: rgba(255, 255, 255, 0.85);
+  --soft: rgba(255, 255, 255, 0.75);
   --yellow: #fff200;
   --gray: #9e9e9e;
   --white: #fff;
-  --spaceCentered: 80%;
+  --spaceCentered: 70%;
 }
 
 a {

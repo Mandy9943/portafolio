@@ -51,10 +51,11 @@ const NavbarS = styled.div`
   width: 100%;
   padding: 15px;
   display: flex;
+  margin-bottom: 20px;
 
   background: var(--primary);
   a {
-    color: var(--light);
+    color: var(--soft);
     :hover {
       color: var(--white);
     }
