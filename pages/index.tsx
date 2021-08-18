@@ -6,7 +6,7 @@ const name = " Armando Cesar Martin Calderon";
 export default function Home() {
   return (
     <Layout title={`Portafolio - ${name}`}>
-      <div>
+      <InfoSectionS>
         <ImageBox>
           <img src="profile.jpg" alt="" />
         </ImageBox>
@@ -14,14 +14,22 @@ export default function Home() {
           <div className="name">Armando Cesar Martin Calderon</div>
           <div className="ocpation">Front End Developer</div>
         </InfoBox>
-      </div>
+      </InfoSectionS>
     </Layout>
   );
 }
+const InfoSectionS = styled.div`
+  width: 100%;
+  display: flex;
+`;
 const ImageBox = styled.div`
-  flex: 33.33.%;
+  display: flex;
+  flex: 33%;
+  img {
+    width: 100%;
+  }
 `;
 const InfoBox = styled.div`
-  flex: 66.66.%;
+  flex: 66%;
   padding: 0 10px;
 `;
