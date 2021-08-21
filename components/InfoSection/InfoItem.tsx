@@ -53,15 +53,17 @@ const InfoItemS = styled.div`
   align-items: center;
   a {
     color: inherit;
-    :hover {
+    /* :hover {
       color: var(--primary);
-    }
+    } */
   }
 
   span {
-    color: var(--primary);
     min-width: 20px;
     font-size: 20px;
     margin-right: 10px;
+  }
+  :hover {
+    color: var(--primary);
   }
 `;

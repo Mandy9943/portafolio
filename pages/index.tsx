@@ -34,6 +34,8 @@ const NameS = styled.div`
   background: linear-gradient(180deg, #034ea2 0%, #00145e 100%);
   color: var(--light);
   padding: 15px 20px;
+  border-radius: 5px;
+  justify-content: center;
 `;
 
 const ContentS = styled.div`
