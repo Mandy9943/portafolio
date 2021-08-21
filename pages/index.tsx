@@ -4,6 +4,7 @@ import styled from "styled-components";
 import RegularButtom from "../components/Button/RegularButtom";
 import Experience from "../components/ExperienceSection/Experience";
 import Layout from "../components/Layout/Layout";
+import Projects from "../components/Projects/Projects";
 import Skills from "../components/SkillsSection/Skills";
 import TextSection from "../components/TextSection/TextSection";
 const name = " Armando Cesar Martin Calderon";
@@ -48,6 +49,7 @@ export default function Home() {
           <TextSection title="Informacion Adicional" faIcon="plus" />
         </ContentRigthS>
       </ContentS>
+      <Projects />
     </Layout>
   );
 }

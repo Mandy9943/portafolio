@@ -29,3 +29,15 @@ body {
   color: rgba(0, 0, 0, 0.75);
   background-color: silver;
 }
+
+img {
+  width: 100%;
+  height: 100%;
+}
+p {
+  line-height: 20px;
+}
+
+.with-mb {
+  margin-bottom: 15px;
+}

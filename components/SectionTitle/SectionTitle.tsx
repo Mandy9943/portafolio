@@ -4,15 +4,18 @@ interface IProps {
   title: string;
   faIcon?: string;
   noLine?: boolean;
+  center?: boolean;
 }
 
-const SectionTitle = ({ title, faIcon, noLine }: IProps) => {
+const SectionTitle = ({ title, faIcon, noLine, center }: IProps) => {
   return (
-    <WrapperS>
+    <WrapperS center>
       <SectionTitleS className="section-title">
-        <span className="icon">
-          <i className={`fa fa-${faIcon}`}></i>
-        </span>
+        {faIcon && (
+          <span className="icon">
+            <i className={`fa fa-${faIcon}`}></i>
+          </span>
+        )}
         <h2 className="title">{title}</h2>
       </SectionTitleS>
       {!noLine && <LineS />}
@@ -22,9 +25,14 @@ const SectionTitle = ({ title, faIcon, noLine }: IProps) => {
 
 export default SectionTitle;
 
-const WrapperS = styled.div`
+interface IWrapperS {
+  center: boolean;
+}
+
+const WrapperS = styled.div<IWrapperS>`
   display: flex;
   align-items: center;
+  justify-content: ${(props) => (props.center ? "center" : "flex-start")};
 `;
 const SectionTitleS = styled.div`
   margin-bottom: 10px;
