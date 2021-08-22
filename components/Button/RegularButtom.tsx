@@ -55,7 +55,7 @@ export default RegularButtom;
 interface IRegularButtomS {
   mainColor: string;
   backgroundColor: string;
-  hoverBackgroundColor: string;
+  // hoverBackgroundColor: string;
 }
 const RegularButtomS = styled.div<IRegularButtomS>`
   display: flex;
