@@ -1,5 +1,5 @@
 import React from "react";
-import SectionTitle from "../SectionTitle/SectionTitle";
+import SectionTitle from "../../SectionTitle/SectionTitle";
 import styled from "styled-components";
 
 interface IProps {

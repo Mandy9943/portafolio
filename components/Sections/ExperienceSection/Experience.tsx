@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import SectionTitle from "../SectionTitle/SectionTitle";
+import SectionTitle from "../../SectionTitle/SectionTitle";
 import ExperienceItem from "./ExperienceItem";
 
 const Experience = () => {

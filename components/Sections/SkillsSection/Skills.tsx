@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import SectionTitle from "../SectionTitle/SectionTitle";
+import SectionTitle from "../../SectionTitle/SectionTitle";
 import SkillItem from "./SkillItem";
 const Skills = () => {
   return (

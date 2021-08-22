@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import Experience from "../components/ExperienceSection/Experience";
-import InfoSection from "../components/InfoSection/InfoSection";
+import Experience from "../components/Sections/ExperienceSection/Experience";
+import InfoSection from "../components/Sections/InfoSection/InfoSection";
 import Layout from "../components/Layout/Layout";
 import Projects from "../components/Projects/Projects";
-import Skills from "../components/SkillsSection/Skills";
-import TextSection from "../components/TextSection/TextSection";
+import Skills from "../components/Sections/SkillsSection/Skills";
+import TextSection from "../components/Sections/TextSection/TextSection";
 const name = " Armando Cesar Martin Calderon";
 
 export default function Home() {

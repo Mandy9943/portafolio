@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ProgresBar from "../ProgresBar/ProgresBar";
+import ProgresBar from "../../ProgresBar/ProgresBar";
 const SkillItem = () => {
   return (
     <SkillItemS>

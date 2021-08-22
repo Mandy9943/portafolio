@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import RegularButtom from "../Button/RegularButtom";
+import RegularButtom from "../../Button/RegularButtom";
 import BoxSection from "./BoxSection";
 import InfoItem from "./InfoItem";
 const InfoSection = () => {
