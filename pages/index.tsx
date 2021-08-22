@@ -5,23 +5,33 @@ import Layout from "../components/Layout/Layout";
 import Projects from "../components/Projects/Projects";
 import Skills from "../components/Sections/SkillsSection/Skills";
 import TextSection from "../components/Sections/TextSection/TextSection";
-const name = " Armando Cesar Martin Calderon";
+import { adictionalInfo, objetives, personalInfo } from "../data";
+
+const info = personalInfo;
 
 export default function Home() {
   return (
-    <Layout title={`Portafolio - ${name}`}>
+    <Layout title={`Portafolio - ${info.name}`}>
       <NameS>
-        <h1>Armando Cesar Martin Calderon</h1>
+        <h1>{info.name}</h1>
       </NameS>
-      <InfoSection />
+      <InfoSection info={info} />
       <ContentS>
         <ContentLeftS>
           <Skills />
         </ContentLeftS>
         <ContentRigthS>
           <Experience />
-          <TextSection title="Objetivos" faIcon="industry" />
-          <TextSection title="Informacion Adicional" faIcon="plus" />
+          <TextSection
+            title="Objetivos"
+            faIcon="industry"
+            content={objetives}
+          />
+          <TextSection
+            title="Informacion Adicional"
+            faIcon="plus"
+            content={adictionalInfo}
+          />
         </ContentRigthS>
       </ContentS>
       <Projects />

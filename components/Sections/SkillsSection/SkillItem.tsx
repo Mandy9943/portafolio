@@ -1,13 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import ProgresBar from "../../ProgresBar/ProgresBar";
-const SkillItem = () => {
+
+interface IProps {
+  skill: string;
+  percent: number;
+}
+
+const SkillItem = ({ skill, percent }: IProps) => {
   return (
     <SkillItemS>
-      <div className="skillname">JavaScript</div>
+      <div className="skillname">{skill}</div>
       <div className="progress">
         <ProgresBar
-          percent={70}
+          percent={percent}
           totalProgresColor="var(--gray)"
           progresColor="var(--primary)"
         />

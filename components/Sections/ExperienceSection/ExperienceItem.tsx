@@ -1,20 +1,41 @@
 import React from "react";
 import styled from "styled-components";
-const ExperienceItem = () => {
+
+interface IProps {
+  position: string;
+  place: string;
+  beginDate: string;
+  endDate: string;
+  description: string;
+  link?: string;
+}
+const ExperienceItem = ({
+  position,
+  place,
+  beginDate,
+  endDate,
+  description,
+  link,
+}: IProps) => {
   return (
     <ExperienceItemS>
       <div className="position section">
-        <h3>Front end developer en Zonassoft</h3>
+        <h3>
+          {position} en {place}
+        </h3>
       </div>
-      <div className="time section">2005 - 2021</div>
-      <div className="description section">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius beatae
-        officia deleniti perspiciatis ex repellendus explicabo quibusdam dolorem
-        labore, consequuntur odit soluta sed commodi voluptate.
+      <div className="time section">
+        {beginDate} - {endDate}
       </div>
-      <div className="link">
-        Sitio : <a href="https://zonassoft.com">https://zonassoft.com</a>
-      </div>
+      <div className="description section">{description}</div>
+      {link && (
+        <div className="link">
+          Sitio :{" "}
+          <a href={link} target="_blank">
+            {link}
+          </a>
+        </div>
+      )}
     </ExperienceItemS>
   );
 };

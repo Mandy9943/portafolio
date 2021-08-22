@@ -1,26 +1,27 @@
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
+import { IProject } from "../../types/types";
 import RegularButtom from "../Button/RegularButtom";
-interface IProps {}
-const ProjectItem = ({}: IProps) => {
+interface IProps {
+  projetc: IProject;
+}
+const ProjectItem = ({ projetc }: IProps) => {
+  const { title, description, img, link } = projetc;
   return (
     <ProjetItemS>
       <ProjectContainerS>
-        <Link href="/project/1">
-          <ImageContainerS>
-            <img src="images/logo1.png" alt="" />
-          </ImageContainerS>
-        </Link>
+        <ImageContainerS>
+          <Link href={link}>
+            <img src={img} alt={title} />
+          </Link>
+        </ImageContainerS>
         <ContentProjectS>
           <div className="title with-mb">
-            <h3>Proyecto UE-Cuba</h3>
+            <h3>{title}</h3>
           </div>
           <div className="description with-mb">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam et
-              nulla perspiciatis voluptatibus, id corporis.
-            </p>
+            <p>{description}</p>
           </div>
         </ContentProjectS>
       </ProjectContainerS>
@@ -38,11 +39,13 @@ const ProjectContainerS = styled.div`
   border: 1px solid var(--primary);
   border-radius: 5px;
   box-shadow: 1px 1px 4px var(--dark);
+  min-height: 380px;
 `;
 const ImageContainerS = styled.div`
   max-height: 250px;
   overflow: hidden;
   cursor: pointer;
+
   /* transform: scale(50%); */
   img {
     transform: scale(1);

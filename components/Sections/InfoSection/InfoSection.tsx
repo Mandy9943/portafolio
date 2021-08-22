@@ -1,36 +1,37 @@
 import React from "react";
 import styled from "styled-components";
+import { IPersonalInfo } from "../../../types/types";
 import RegularButtom from "../../Button/RegularButtom";
 import BoxSection from "./BoxSection";
 import InfoItem from "./InfoItem";
-const InfoSection = () => {
+
+interface IProps {
+  info: IPersonalInfo;
+}
+const InfoSection = ({ info }: IProps) => {
   return (
     <InfoSectionS>
       <ImageBox>
-        <img src="/images/profile.jpg" alt="" />
+        <img src={info.profileImg} alt={info.name} />
       </ImageBox>
       <InfoBox>
         <BoxSection title="Informacion Personal">
-          <InfoItem faIncon="user" content="Front end Developer" />
-          <InfoItem faIncon="envelope" content="cesrmartn@yahoo.es" email />
-          <InfoItem faIncon="phone" content="+5358379931" phone />
-          <InfoItem
-            faIncon="map-marker"
-            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum, minima ullam delectus aperiam quisquam?"
-          />
-          <InfoItem faIncon="flag" content="Cuba" />
-          <InfoItem faIncon="calendar" content="22/09/1999" />
+          <InfoItem faIncon="user" content={info.position} />
+          <InfoItem faIncon="envelope" content={info.email} email />
+          <InfoItem faIncon="phone" content={`+${info.phone}`} phone />
+          <InfoItem faIncon="map-marker" content={info.address} />
+          <InfoItem faIncon="flag" content={info.nationality} />
+          <InfoItem faIncon="calendar" content={info.birthday} />
         </BoxSection>
         <BoxSection title="Redes Sociales">
-          <InfoItem faIncon="facebook" content="https://facebook.com" link />
-          <InfoItem faIncon="twitter" content="https://twitter.com" link />
-          <InfoItem faIncon="instagram" content="https://instagram.com" link />
-          <InfoItem
-            faIncon="whatsapp"
-            content="https://wa.me/+5358379931"
-            link
-          />
-          <InfoItem faIncon="telegram" content="https://t.me/Mandy9943" link />
+          {info.socialMedia.map((social, i) => (
+            <InfoItem
+              key={i}
+              faIncon={social.icon}
+              content={social.link}
+              link
+            />
+          ))}
         </BoxSection>
       </InfoBox>
     </InfoSectionS>

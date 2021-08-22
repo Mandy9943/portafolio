@@ -1,28 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import { skills } from "../../../data";
 import SectionTitle from "../../SectionTitle/SectionTitle";
 import SkillItem from "./SkillItem";
+
+const skillList = skills;
 const Skills = () => {
   return (
     <SkillsS>
       <SectionTitle title="Habilidades" faIcon="rocket" noLine />
 
       <ListSkillsS>
-        <SkillItem />
-        <SkillItem />
-        <SkillItem />
-        <SkillItem />
-        <SkillItem />
-        <SkillItem />
-        <SkillItem />
-        <SkillItem />
-        <SkillItem />
-        <SkillItem />
-        <SkillItem />
-        <SkillItem />
-        <SkillItem />
-        <SkillItem />
-        <SkillItem />
+        {skillList.map((skill, i) => (
+          <SkillItem key={i} skill={skill.skill} percent={skill.percent} />
+        ))}
       </ListSkillsS>
     </SkillsS>
   );

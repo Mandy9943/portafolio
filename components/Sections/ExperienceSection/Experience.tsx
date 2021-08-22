@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { experiences } from "../../../data";
 import SectionTitle from "../../SectionTitle/SectionTitle";
 import ExperienceItem from "./ExperienceItem";
+
+const experiencesList = experiences;
 
 const Experience = () => {
   return (
@@ -9,7 +12,18 @@ const Experience = () => {
       <SectionTitle title="Experiencia" faIcon="briefcase" />
       <div className="experinceContainer">
         <ul>
-          <ExperienceItem />
+          {experiencesList.map(
+            ({ position, place, beginDate, endDate, description, link }, i) => (
+              <ExperienceItem
+                place={place}
+                position={position}
+                beginDate={beginDate}
+                endDate={endDate}
+                description={description}
+                link={link}
+              />
+            )
+          )}
         </ul>
       </div>
     </ExperienceS>

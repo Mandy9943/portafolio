@@ -2,16 +2,15 @@ import React from "react";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import styled from "styled-components";
 import ProjectItem from "./ProjectItem";
+import { projects } from "../../data";
 const Projects = () => {
   return (
     <ProjectsS>
       <SectionTitle title="Proyectos" noLine center />
       <ProjectsContainerS>
-        <ProjectItem />
-        <ProjectItem />
-        <ProjectItem />
-        <ProjectItem />
-        <ProjectItem />
+        {projects.map((project, i) => (
+          <ProjectItem projetc={project} key={i} />
+        ))}
       </ProjectsContainerS>
     </ProjectsS>
   );
