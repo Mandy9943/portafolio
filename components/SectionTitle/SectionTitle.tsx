@@ -9,7 +9,7 @@ interface IProps {
 
 const SectionTitle = ({ title, faIcon, noLine, center }: IProps) => {
   return (
-    <WrapperS center>
+    <WrapperS center={center}>
       <SectionTitleS className="section-title">
         {faIcon && (
           <span className="icon">

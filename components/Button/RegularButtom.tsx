@@ -7,14 +7,16 @@ interface IProps {
   backgroundColor?: string;
   href?: string;
   external?: boolean;
+  onClick?: () => void;
 }
 
 const RegularButtom: FC<IProps> = ({
   children,
-  mainColor = "var(--white)",
-  backgroundColor = "var(--transparent)",
+  mainColor = "var(--primary)",
+  backgroundColor = "var(--white)",
   href,
   external,
+  onClick,
 }) => {
   if (href) {
     if (!external) {
@@ -44,7 +46,11 @@ const RegularButtom: FC<IProps> = ({
     }
   }
   return (
-    <RegularButtomS mainColor={mainColor} backgroundColor={backgroundColor}>
+    <RegularButtomS
+      mainColor={mainColor}
+      backgroundColor={backgroundColor}
+      onClick={onClick}
+    >
       {children}
     </RegularButtomS>
   );
@@ -55,6 +61,7 @@ export default RegularButtom;
 interface IRegularButtomS {
   mainColor: string;
   backgroundColor: string;
+
   // hoverBackgroundColor: string;
 }
 const RegularButtomS = styled.div<IRegularButtomS>`
@@ -64,6 +71,7 @@ const RegularButtomS = styled.div<IRegularButtomS>`
   border: 1px solid ${(props) => props.mainColor};
   background: ${(props) => props.backgroundColor};
   border-radius: 5px;
+  cursor: pointer;
   color: ${(props) => props.mainColor};
   :hover {
     border: 1px solid ${(props) => props.backgroundColor};

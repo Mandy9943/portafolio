@@ -15,6 +15,7 @@ const Experience = () => {
           {experiencesList.map(
             ({ position, place, beginDate, endDate, description, link }, i) => (
               <ExperienceItem
+                key={i}
                 place={place}
                 position={position}
                 beginDate={beginDate}

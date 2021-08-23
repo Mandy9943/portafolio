@@ -34,12 +34,18 @@ export default ProjectItem;
 const ProjetItemS = styled.div`
   flex: 33.33%;
   padding: 30px;
+  @media (max-width: 1024px) {
+    flex: 50%;
+  }
+  @media (max-width: 600px) {
+    flex: 100%;
+  }
 `;
 const ProjectContainerS = styled.div`
   border: 1px solid var(--primary);
   border-radius: 5px;
   box-shadow: 1px 1px 4px var(--dark);
-  min-height: 380px;
+  min-height: 350px;
 `;
 const ImageContainerS = styled.div`
   max-height: 250px;

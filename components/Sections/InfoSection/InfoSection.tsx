@@ -42,6 +42,9 @@ export default InfoSection;
 const InfoSectionS = styled.div`
   width: 100%;
   display: flex;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 const ImageBox = styled.div`
   display: flex;
@@ -50,6 +53,7 @@ const ImageBox = styled.div`
   padding: 15px 30px 15px 15px;
   img {
     width: 100%;
+    height: fit-content;
     /* border-radius: 50%; */
     box-shadow: 1px 1px 5px black;
   }
@@ -59,4 +63,7 @@ const InfoBox = styled.div`
   padding: 15px;
   display: flex;
   padding: 10px;
+  @media (max-width: 730px) {
+    flex-direction: column;
+  }
 `;

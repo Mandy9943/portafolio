@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import useResize from "../../../hooks/useResize";
 
 interface IProps {
   faIncon: string;
@@ -10,6 +11,7 @@ interface IProps {
 }
 
 const InfoItem = ({ faIncon, content, email, phone, link }: IProps) => {
+  const isMediumScreenWidth = useResize(730);
   let _content = <p>{content}</p>;
 
   if (email) {
@@ -30,7 +32,7 @@ const InfoItem = ({ faIncon, content, email, phone, link }: IProps) => {
     _content = (
       <p>
         <a href={`${content}`} target="_blank" rel="noopener noreferrer">
-          {content}
+          {!isMediumScreenWidth && <span>{content}</span>}
         </a>
       </p>
     );
@@ -51,6 +53,9 @@ const InfoItemS = styled.div`
   display: flex;
   font-size: 16px;
   align-items: center;
+  @media (max-width: 1024px) {
+    margin-right: 30px;
+  }
   a {
     color: inherit;
     /* :hover {

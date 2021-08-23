@@ -46,10 +46,18 @@ const NameS = styled.div`
   padding: 15px 20px;
   border-radius: 5px;
   justify-content: center;
+  h1 {
+    @media (max-width: 600px) {
+      font-size: 20px;
+    }
+  }
 `;
 
 const ContentS = styled.div`
   display: flex;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 const ContentLeftS = styled.div`
   flex: 33%;
@@ -58,4 +66,7 @@ const ContentLeftS = styled.div`
 const ContentRigthS = styled.div`
   flex: 66%;
   padding: 20px 0 20px 20px;
+  @media (max-width: 400px) {
+    padding: 7px;
+  }
 `;

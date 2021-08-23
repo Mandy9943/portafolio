@@ -21,12 +21,16 @@ const BoxSectionS = styled.div`
   flex: 50%;
   display: flex;
   flex-direction: column;
-  .heading {
-  }
 `;
 const ContentS = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 730px) {
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;

@@ -26,4 +26,9 @@ const LayoutS = styled.div``;
 const ContainerS = styled.div`
   width: var(--spaceCentered);
   margin: auto;
+
+  @media (max-width: 400px) {
+    width: 100%;
+    padding: 10px;
+  }
 `;
