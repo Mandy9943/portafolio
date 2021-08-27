@@ -11,19 +11,25 @@ interface IProps {
 }
 
 const InfoItem = ({ faIncon, content, email, phone, link }: IProps) => {
-  const isMediumScreenWidth = useResize(730);
-  let _content = <p>{content}</p>;
+  let _content = (
+    <p>
+      <span>
+        <i className={`fa fa-${faIncon}`}></i>
+      </span>
+      <span className="content-info-item">{content}</span>{" "}
+    </p>
+  );
 
   if (email) {
     _content = (
-      <> 
-
-          <p>
+      <>
+        <p>
           <a href={`mailto:${content}`}>
             <span>
               <i className={`fa fa-${faIncon}`}></i>
             </span>
-            {content}</a>
+            <span className="content-info-item">{content}</span>
+          </a>
         </p>
       </>
     );
@@ -31,13 +37,13 @@ const InfoItem = ({ faIncon, content, email, phone, link }: IProps) => {
   if (phone) {
     _content = (
       <>
-
         <p>
           <a href={`tel:${content}`}>
             <span>
               <i className={`fa fa-${faIncon}`}></i>
             </span>
-            {content}</a>
+            <span className="content-info-item">{content}</span>
+          </a>
         </p>
       </>
     );
@@ -45,26 +51,18 @@ const InfoItem = ({ faIncon, content, email, phone, link }: IProps) => {
   if (link) {
     _content = (
       <>
-
         <p>
           <a href={`${content}`} target="_blank" rel="noopener noreferrer">
             <span>
               <i className={`fa fa-${faIncon}`}></i>
             </span>
-            {!isMediumScreenWidth && <span>
-              {content}
-            </span>}
+            <span className="content-info-item hide-on-small">{content}</span>
           </a>
         </p>
       </>
     );
   }
-  return (
-    <InfoItemS className="infoConiner with-mb">
-
-      {_content}
-    </InfoItemS>
-  );
+  return <InfoItemS className="infoConiner with-mb">{_content}</InfoItemS>;
 };
 
 export default InfoItem;
@@ -77,6 +75,7 @@ const InfoItemS = styled.div`
     margin-right: 30px;
   }
   a {
+    font-size: inherit;
     color: inherit;
     /* :hover {
       color: var(--primary);
@@ -85,11 +84,17 @@ const InfoItemS = styled.div`
 
   span {
     min-width: 20px;
-    font-size: 20px;
     margin-right: 10px;
+    i {
+      font-size: 18px;
+    }
   }
   :hover {
     color: var(--primary);
   }
+  .hide-on-small {
+    @media (max-width: 730px) {
+      display: none;
+    }
+  }
 `;
-
