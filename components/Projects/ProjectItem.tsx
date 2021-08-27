@@ -46,6 +46,7 @@ const ProjectContainerS = styled.div`
   border-radius: 5px;
   box-shadow: 1px 1px 4px var(--dark);
   min-height: 350px;
+  background-color: var(--white);
 `;
 const ImageContainerS = styled.div`
   max-height: 250px;

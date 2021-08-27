@@ -15,14 +15,16 @@ const Layout: FC<IProps> = ({ title, children }) => {
           <title>{title}</title>
         </Head>
       )}
-      <Navbar />
+      {/* <Navbar /> */}
       <ContainerS>{children}</ContainerS>
     </LayoutS>
   );
 };
 
 export default Layout;
-const LayoutS = styled.div``;
+const LayoutS = styled.div`
+  margin-top: 25px;
+`;
 const ContainerS = styled.div`
   width: var(--spaceCentered);
   margin: auto;

@@ -12,8 +12,8 @@ interface IProps {
 
 const RegularButtom: FC<IProps> = ({
   children,
-  mainColor = "var(--primary)",
-  backgroundColor = "var(--white)",
+  mainColor = "var(--white)",
+  backgroundColor = "var(--primary)",
   href,
   external,
   onClick,

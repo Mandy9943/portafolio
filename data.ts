@@ -12,6 +12,10 @@ export const personalInfo:IPersonalInfo = {
     profileImg:"/images/profile.jpg",
     socialMedia:[
         {
+            icon:"github",
+            link:"https://github.com/Mandy9943/"
+        },
+        {
             icon:"facebook",
             link:"https://www.facebook.com/cesar.martin.794/"
         },
