@@ -18,7 +18,7 @@ const TextSection = ({ title, faIcon, content }: IProps) => {
         ) : (
           <ul>
             {content.map((str, i) => (
-              <li>
+              <li key={i}>
                 <p>{str}</p>
               </li>
             ))}

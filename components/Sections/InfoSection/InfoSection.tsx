@@ -53,7 +53,8 @@ const ImageBox = styled.div`
   padding: 15px 30px 15px 15px;
   img {
     width: 100%;
-    height: max-content;
+    /* height: 50px; */
+    /* height: max-content; */
     /* border-radius: 50%; */
     box-shadow: 1px 1px 5px black;
   }
