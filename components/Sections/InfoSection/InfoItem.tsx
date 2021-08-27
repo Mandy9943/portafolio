@@ -16,32 +16,52 @@ const InfoItem = ({ faIncon, content, email, phone, link }: IProps) => {
 
   if (email) {
     _content = (
-      <p>
-        <a href={`mailto:${content}`}>{content}</a>
-      </p>
+      <> 
+
+          <p>
+          <a href={`mailto:${content}`}>
+            <span>
+              <i className={`fa fa-${faIncon}`}></i>
+            </span>
+            {content}</a>
+        </p>
+      </>
     );
   }
   if (phone) {
     _content = (
-      <p>
-        <a href={`tel:${content}`}>{content}</a>
-      </p>
+      <>
+
+        <p>
+          <a href={`tel:${content}`}>
+            <span>
+              <i className={`fa fa-${faIncon}`}></i>
+            </span>
+            {content}</a>
+        </p>
+      </>
     );
   }
   if (link) {
     _content = (
-      <p>
-        <a href={`${content}`} target="_blank" rel="noopener noreferrer">
-          {!isMediumScreenWidth && <span>{content}</span>}
-        </a>
-      </p>
+      <>
+
+        <p>
+          <a href={`${content}`} target="_blank" rel="noopener noreferrer">
+            <span>
+              <i className={`fa fa-${faIncon}`}></i>
+            </span>
+            {!isMediumScreenWidth && <span>
+              {content}
+            </span>}
+          </a>
+        </p>
+      </>
     );
   }
   return (
     <InfoItemS className="infoConiner with-mb">
-      <span>
-        <i className={`fa fa-${faIncon}`}></i>
-      </span>
+
       {_content}
     </InfoItemS>
   );
@@ -72,3 +92,4 @@ const InfoItemS = styled.div`
     color: var(--primary);
   }
 `;
+

@@ -23,12 +23,12 @@ const InfoSection = ({ info }: IProps) => {
           <InfoItem faIncon="flag" content={info.nationality} />
           <InfoItem faIncon="calendar" content={info.birthday} />
         </BoxSection>
-        <BoxSection title="Redes Sociales">
+      <BoxSection title="Redes Sociales" isRow>
           {info.socialMedia.map((social, i) => (
-            <InfoItem
+              <InfoItem
               key={i}
               faIncon={social.icon}
-              content={social.link}
+                content={social.link}
               link
             />
           ))}

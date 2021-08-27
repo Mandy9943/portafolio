@@ -12,17 +12,22 @@ const Skills = () => {
   const [isOpen, setIsOpen] = useState(false);
   const skillRef: React.Ref<HTMLDivElement> = useRef(null);
 
-  const handleOpen = useCallback(() => {
-    setIsOpen(!isOpen);
-  }, []);
-
-  useEffect(() => {
-    if (!isOpen) {
+  const handleOpen = () => {
+    if (isOpen) {
       if (skillRef && skillRef.current) {
         skillRef.current.scrollIntoView({ behavior: "smooth" });
       }
     }
-  }, [isOpen]);
+    setIsOpen(!isOpen);
+  };
+
+  // useEffect(() => {
+  //   if (!isOpen) {
+  //     if (skillRef && skillRef.current) {
+  //       skillRef.current.scrollIntoView({ behavior: "smooth" });
+  //     }
+  //   }
+  // }, [isOpen]);
 
   return (
     <SkillsS ref={skillRef}>
@@ -48,7 +53,7 @@ const Skills = () => {
         })}
       </ListSkillsS>
       <RegularButtom onClick={handleOpen}>
-        {isOpen ? <span>Ver Menos</span> : "Ver mas"}
+        {isOpen ? "Ver Menos" : "Ver mas"}
       </RegularButtom>
     </SkillsS>
   );
