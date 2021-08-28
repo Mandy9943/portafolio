@@ -1,9 +1,9 @@
 export interface IPersonalInfo {
   name: string;
-  position: string;
+  position: ITranslation<string>;
   email: string;
   phone?: number;
-  address?: string;
+  address?: ITranslation<string>;
   nationality: string;
   birthday?: string;
   profileImg: string;
@@ -22,7 +22,10 @@ export interface IExperince {
   description: string;
   link?: string;
 }
-
+export interface ITranslation<T> {
+  en: T;
+  es: T;
+}
 export interface IProject {
   img: string;
   title: string;

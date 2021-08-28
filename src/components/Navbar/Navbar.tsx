@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
+import { useTranslations } from "next-intl";
 
 const routes = [
   {
@@ -16,6 +17,10 @@ const routes = [
 
 const Navbar = () => {
   const routeHook = useRouter();
+  const t = useTranslations("Index");
+
+  const { locale, locales, route } = useRouter();
+  const otherLocale = locales?.find((cur) => cur !== locale);
 
   return (
     <NavbarS>
@@ -27,13 +32,23 @@ const Navbar = () => {
         </IndexS> */}
         <LinksS>
           <ul>
-            {routes.map((route, i) => {
-              const { pathname } = routeHook;
-              const active = pathname === route.route;
+            {/* {routes.map((route, i) => {
+              
               return (
                 <li key={i}>
                   <Link href={route.route}>
                     <a className={active ? "active" : ""}>{route.name}</a>
+                  </Link>
+                </li>
+              );
+            })} */}
+
+            {locales.map((lang) => {
+              const active = lang === locale;
+              return (
+                <li>
+                  <Link href={route} locale={lang}>
+                    <a className={active ? "active" : ""}>{lang}</a>
                   </Link>
                 </li>
               );
@@ -83,6 +98,7 @@ const LinksS = styled.nav`
     display: flex;
     li {
       margin: 0 5px;
+      text-transform: uppercase;
       .active {
         color: var(--white);
       }

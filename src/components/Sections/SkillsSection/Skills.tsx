@@ -1,6 +1,7 @@
+import { useTranslations } from "next-intl";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-import { skills } from "../../../data";
+import { skills } from "../../../../data";
 import useResize from "../../../hooks/useResize";
 import RegularButtom from "../../Button/RegularButtom";
 import SectionTitle from "../../SectionTitle/SectionTitle";
@@ -8,6 +9,7 @@ import SkillItem from "./SkillItem";
 
 const skillList = skills;
 const Skills = () => {
+  const t = useTranslations("Index");
   const isLine = useResize(1024);
   const [isOpen, setIsOpen] = useState(false);
   const skillRef: React.Ref<HTMLDivElement> = useRef(null);
@@ -31,7 +33,11 @@ const Skills = () => {
 
   return (
     <SkillsS ref={skillRef}>
-      <SectionTitle title="Habilidades" faIcon="rocket" noLine={!isLine} />
+      <SectionTitle
+        title={t("skills").toString()}
+        faIcon="rocket"
+        noLine={!isLine}
+      />
 
       <ListSkillsS>
         {skillList.map((skill, i) => {
@@ -53,7 +59,9 @@ const Skills = () => {
         })}
       </ListSkillsS>
       <RegularButtom onClick={handleOpen}>
-        {isOpen ? "Ver Menos" : "Ver mas"}
+        {isOpen
+          ? t("skill_button_less").toString()
+          : t("skill_button_more").toString()}
       </RegularButtom>
     </SkillsS>
   );

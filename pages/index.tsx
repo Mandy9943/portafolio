@@ -1,17 +1,26 @@
 import styled from "styled-components";
-import Experience from "../components/Sections/ExperienceSection/Experience";
-import InfoSection from "../components/Sections/InfoSection/InfoSection";
-import Layout from "../components/Layout/Layout";
-import Projects from "../components/Projects/Projects";
-import Skills from "../components/Sections/SkillsSection/Skills";
-import TextSection from "../components/Sections/TextSection/TextSection";
+import Experience from "../src/components/Sections/ExperienceSection/Experience";
+import InfoSection from "../src/components/Sections/InfoSection/InfoSection";
+import Layout from "../src/components/Layout/Layout";
+import Projects from "../src/components/Projects/Projects";
+import Skills from "../src/components/Sections/SkillsSection/Skills";
+import TextSection from "../src/components/Sections/TextSection/TextSection";
 import { adictionalInfo, objetives, personalInfo } from "../data";
+import { useRouter } from "next/dist/client/router";
+import { useTranslations } from "next-intl";
 
 const info = personalInfo;
 
 export default function Home() {
+  const t = useTranslations("Index");
+  const { locale } = useRouter();
+
+  const adictional_info = adictionalInfo.map((info) => {
+    return info[locale];
+  });
+
   return (
-    <Layout title={`Portafolio - ${info.name}`}>
+    <Layout title={`CV - ${info.name}`}>
       <NameS>
         <h1>{info.name}</h1>
       </NameS>
@@ -23,14 +32,14 @@ export default function Home() {
         <ContentRigthS>
           <Experience />
           <TextSection
-            title="Objetivos"
+            title={t("objetive").toString()}
             faIcon="industry"
-            content={objetives}
+            content={objetives[locale]}
           />
           <TextSection
-            title="Informacion Adicional"
+            title={t("personal_info").toString()}
             faIcon="plus"
-            content={adictionalInfo}
+            content={adictional_info}
           />
         </ContentRigthS>
       </ContentS>
@@ -38,6 +47,17 @@ export default function Home() {
     </Layout>
   );
 }
+
+export function getStaticProps({ locale }) {
+  return {
+    props: {
+      messages: {
+        ...require(`../src/assets/translations/index/${locale}.json`),
+      },
+    },
+  };
+}
+
 const NameS = styled.div`
   width: 100%;
   display: flex;

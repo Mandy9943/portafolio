@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+import { useRouter } from "next/dist/client/router";
 import React from "react";
 import styled from "styled-components";
 import { IPersonalInfo } from "../../../types/types";
@@ -9,26 +11,28 @@ interface IProps {
   info: IPersonalInfo;
 }
 const InfoSection = ({ info }: IProps) => {
+  const t = useTranslations("Index");
+  const { locale } = useRouter();
   return (
     <InfoSectionS>
       <ImageBox>
         <img src={info.profileImg} alt={info.name} />
       </ImageBox>
       <InfoBox>
-        <BoxSection title="Informacion Personal">
-          <InfoItem faIncon="user" content={info.position} />
+        <BoxSection title={t("personal_info").toString()}>
+          <InfoItem faIncon="user" content={info.position[locale]} />
           <InfoItem faIncon="envelope" content={info.email} email />
           <InfoItem faIncon="phone" content={`+${info.phone}`} phone />
-          <InfoItem faIncon="map-marker" content={info.address} />
+          <InfoItem faIncon="map-marker" content={info.address[locale]} />
           <InfoItem faIncon="flag" content={info.nationality} />
           <InfoItem faIncon="calendar" content={info.birthday} />
         </BoxSection>
-      <BoxSection title="Redes Sociales" isRow>
+        <BoxSection title={t("social_media").toString()} isRow>
           {info.socialMedia.map((social, i) => (
-              <InfoItem
+            <InfoItem
               key={i}
               faIncon={social.icon}
-                content={social.link}
+              content={social.link}
               link
             />
           ))}

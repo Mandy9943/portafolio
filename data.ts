@@ -1,12 +1,17 @@
-import { link } from "fs";
-import {IPersonalInfo, ISkill,IExperince, IProject} from "./types/types";
+import {IPersonalInfo, ISkill,IExperince, IProject, ITranslation} from "./src/types/types";
 
 export const personalInfo:IPersonalInfo = {
     name:"Armando Cesar Martin Calderon",
-    position: "Front End Developer",
+    position:{
+        es:"Desarrollador de Front End",
+        en:"Front End Developer",
+    } ,
     email:"cesrmartn@yahoo.es",
     phone:5358379931,
-    address:"Calle 7ma / J y 10, apto 13, edif 9906, Althabana, Boyeros",
+    address:{
+        es:"Calle 7ma / J y 10, apto 13, edif 9906, Althabana, Boyeros",
+        en:"7th Street / J and 10, apt 13, building 9906, Althabana, Boyeros"
+    },
     nationality:"Cuba",
     birthday:"22/09/1999",
     profileImg:"/images/profile.jpg",
@@ -125,58 +130,140 @@ export const skills : ISkill[]= [
     skill:"Matrial UI",
     percent: 80,
     },
+    {
+    skill:"Capacidad para nuevas tecnologias",
+    percent: 90,
+    },
 ]
 
-export const experiences :IExperince[] = [
+export const experiences :ITranslation<IExperince>[] = [
     {
-        place:"Zonassoft",
-        description:`Desarrollo del sitio de web de los proyectos de la union
-        europea en Cuba con reactjs. Me desempeñe como como programador front end. Consistio básicamente en desarrollar todas las vista
-        a partir de una maquetación diseñada en figma. 
-        `,
-        position: "Front end Developer",
-        beginDate:"3/2021",
-        endDate:"8/2021",
-        
+        es:{
+            place:"Zonassoft",
+            description:`Desarrollo del sitio web de los proyectos de la Unión Europea en Cuba con reactjs. 
+            `,
+            position: "Programdor Front end",
+            beginDate:"3/2021",
+            endDate:"8/2021",
+            
+        },
+        en:{
+            place:"Zonassoft",
+            description:`Development of the website of the European Union projects in Cuba with reactjs. 
+            `,
+            position: "Front end programmer",
+            beginDate:"3/2021",
+            endDate:"8/2021",
+            
+        }
     }
 ]
 
-export const objetives :string = `Busco un puesto como programador front-end en el sector
-particular o una empresa orientada a cualquier rubro en donde
-pueda crecer profesionalmente y donde pueda aportar todas mis
-destrezas como programador y adquirir nuevas habilidades
-durante el proceso.`
-export const adictionalInfo :string[] = ["Idioma Ingles intermedio. Estudié en escuela particular llamada Armis en el municio de Marianao","Idioma Ruso basico. Estudio en universidad pero lo llegue aterminar.", "Idioma Espanol. Idioma nativo"]
+export const objetives :ITranslation<string> = {
+    en:`I am looking for a position as a front-end programmer in the private sector or a company oriented to any industry where I can grow professionally and where I can bring all my skills as a programmer and acquire new skills during the process.`,
+    es:`Busco un puesto como programador front-end en el sector
+    particular o una empresa orientada a cualquier rubro en donde
+    pueda crecer profesionalmente y donde pueda aportar todas mis
+    destrezas como programador y adquirir nuevas habilidades
+    durante el proceso.`
+} 
+export const adictionalInfo : ITranslation<string>[] = [ 
+    {
+        en:"Intermediate English language.",
+        es:"Idioma Ingles intermedio."
+    },
+    {
+es:"Idioma Ruso basico.",
+en:"Basic Russian language"
+    },
+    {
+es:"Idioma Español avanzado",
+en:"Advanced Spanish language"
+    },]
 
-export const projects:IProject[]=[
+export const projects:ITranslation<IProject>[]=[
     {
-        img:"images/uemap.png",
-    title: "Sitio web de proyectos de la Unión Europea en Cuba",
-    description: "Sitio web para visualizar en tiempo real datos de los proyectos de la Union Europea en Cuba",
-    link:"https://www.uecooperacioncuba.eu/"
+        en:{
+
+            img:"images/uemap.png",
+        title: "European Union projects in Cuba website",
+        description: "Web site to visualize in real time data of the European Union projects in Cuba.",
+        link:"https://www.uecooperacioncuba.eu/"
+    },
+    es:{
+            img:"images/uemap.png",
+        title: "Sitio web de proyectos de la Unión Europea en Cuba",
+        description: "Sitio web para visualizar en tiempo real datos de los proyectos de la Union Europea en Cuba",
+        link:"https://www.uecooperacioncuba.eu/"
+
+        }
 },
     {
-    img:"images/cubashop.png",
-    title: "Cuba shop",
-    description: "Este fue un proyecto demo que empece pero por cuetiones orgabizativas no pude terminar",
-    link:"https://cloth-shop.netlify.app/"
+        en:{
+
+            img:"images/cubashop.png",
+            title: "Cuba shop",
+            description: "This was a demo project that I started but due to organizational issues I could not finish.",
+            link:"https://cloth-shop.netlify.app/"
+        },
+        es:{
+            img:"images/cubashop.png",
+            title: "Cuba shop",
+            description: "Este fue un proyecto demo que empece pero por cuestiones organizativas no pude finalizar.",
+            link:"https://cloth-shop.netlify.app/"
+
+        }
 },
     {
-    img:"images/enzona.png",
-    title: "Fake enzona",
-    description: "Esto es un intento por imitar la aplicación enzona, esto también es algo no terminado.",
-    link:"https://enzona-react.netlify.app/"
+        en:{
+        
+            img:"images/enzona.png",
+            title: "Fake enzona",
+            description: "This was a demo project that I started but due to organizational issues I could not finish.",
+            link:"https://enzona-react.netlify.app/"
+        },
+        es:{
+        
+            img:"images/enzona.png",
+            title: "Fake enzona",
+            description: "Este fue un proyecto demo que empece pero por cuestiones organizativas no pude finalizar.",
+            link:"https://enzona-react.netlify.app/"
+        }
+    },
+{
+    en:{
+
+        img:"images/cv.png",
+        title: "Curriculum",
+        description: "Resume page to know a little more about me",
+        link:"/"
+    },
+    es:{
+
+        img:"images/cv.png",
+        title: "Curriculum",
+        description: "Pagina de curriculum para conocer un poco mas de mi",
+        link:"/"
+    }
 },
 {
-img:"images/cv.png",
-title: "Curriculum",
-description: "La pagina actual que estas viendo",
-link:"/"
-},
-    {
-    img:"images/mapbox.png",
-    title: "Proyecto demo de mapbox",
-    description: "Probando un la api de mapbox.",
-    link:"https://demo-mapa-cuba.netlify.app/"
-},
+    en:{
+        
+        img:"images/mapbox.png",
+        title: "Demo de mapbox",
+        description: "Testing the mapbox api.",
+        link:"https://demo-mapa-cuba.netlify.app/"
+    
+
+    },
+    es:{
+
+        
+        img:"images/mapbox.png",
+        title: "Mapbox Demo",
+        description: "Probando un la api de mapbox.",
+        link:"https://demo-mapa-cuba.netlify.app/"
+
+    }
+}
 ]
