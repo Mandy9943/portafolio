@@ -19,7 +19,7 @@ export const personalInfo: IPersonalInfo = {
     en: "7th Street / J and 10, apt 13, building 9906, Althabana, Boyeros",
   },
   nationality: "Cuba",
-  birthday: "22/09/1999",
+  //   birthday: "22/09/1999",
   profileImg: "/images/profile.jpg",
   socialMedia: [
     {
