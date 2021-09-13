@@ -3,7 +3,6 @@ import { useRouter } from "next/dist/client/router";
 import React from "react";
 import styled from "styled-components";
 import { IPersonalInfo } from "../../../types/types";
-import RegularButtom from "../../Button/RegularButtom";
 import BoxSection from "./BoxSection";
 import InfoItem from "./InfoItem";
 
@@ -25,7 +24,7 @@ const InfoSection = ({ info }: IProps) => {
           <InfoItem faIncon="phone" content={`+${info.phone}`} phone />
           <InfoItem faIncon="map-marker" content={info.address[locale]} />
           <InfoItem faIncon="flag" content={info.nationality} />
-          <InfoItem faIncon="calendar" content={info.birthday} />
+          {/* <InfoItem faIncon="calendar" content={info.birthday} /> */}
         </BoxSection>
         <BoxSection title={t("social_media").toString()} isRow>
           {info.socialMedia.map((social, i) => (
