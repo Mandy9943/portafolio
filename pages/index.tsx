@@ -37,7 +37,7 @@ export default function Home() {
             content={objetives[locale]}
           />
           <TextSection
-            title={t("personal_info").toString()}
+            title={t("aditional_info").toString()}
             faIcon="plus"
             content={adictional_info}
           />
