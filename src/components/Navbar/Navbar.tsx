@@ -46,7 +46,7 @@ const Navbar = () => {
             {locales.map((lang) => {
               const active = lang === locale;
               return (
-                <li>
+                <li key={lang}>
                   <Link href={route} locale={lang}>
                     <a className={active ? "active" : ""}>{lang}</a>
                   </Link>
