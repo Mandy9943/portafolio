@@ -183,14 +183,14 @@ export const adictionalInfo: ITranslation<string>[] = [
 export const projects: ITranslation<IProject>[] = [
   {
     en: {
-      img: "images/uemap.png",
+      img: "/images/uemap.png",
       title: "European Union projects in Cuba website",
       description:
         "Web site to visualize in real time data of the European Union projects in Cuba.",
       link: "https://www.uecooperacioncuba.eu/",
     },
     es: {
-      img: "images/uemap.png",
+      img: "/images/uemap.png",
       title: "Sitio web de proyectos de la Unión Europea en Cuba",
       description:
         "Sitio web para visualizar en tiempo real datos de los proyectos de la Union Europea en Cuba",
@@ -199,14 +199,14 @@ export const projects: ITranslation<IProject>[] = [
   },
   {
     en: {
-      img: "images/cubashop.png",
+      img: "/images/cubashop.png",
       title: "Cuba shop",
       description:
         "This was a demo project that I started but due to organizational issues I could not finish.",
       link: "https://cloth-shop.netlify.app/",
     },
     es: {
-      img: "images/cubashop.png",
+      img: "/images/cubashop.png",
       title: "Cuba shop",
       description:
         "Este fue un proyecto demo que empece pero por cuestiones organizativas no pude finalizar.",
@@ -215,14 +215,14 @@ export const projects: ITranslation<IProject>[] = [
   },
   {
     en: {
-      img: "images/enzona.png",
+      img: "/images/enzona.png",
       title: "Fake enzona",
       description:
         "This was a demo project that I started but due to organizational issues I could not finish.",
       link: "https://enzona-react.netlify.app/",
     },
     es: {
-      img: "images/enzona.png",
+      img: "/images/enzona.png",
       title: "Fake enzona",
       description:
         "Este fue un proyecto demo que empece pero por cuestiones organizativas no pude finalizar.",
@@ -231,13 +231,13 @@ export const projects: ITranslation<IProject>[] = [
   },
   {
     en: {
-      img: "images/cv.png",
+      img: "/images/cv.png",
       title: "Curriculum",
       description: "Resume page to know a little more about me",
       link: "/",
     },
     es: {
-      img: "images/cv.png",
+      img: "/images/cv.png",
       title: "Curriculum",
       description: "Pagina de curriculum para conocer un poco mas de mi",
       link: "/",
@@ -245,13 +245,13 @@ export const projects: ITranslation<IProject>[] = [
   },
   {
     en: {
-      img: "images/space-launches.png",
+      img: "/images/space-launches.png",
       title: "Upcoming Space Launches",
       description: "Demo testing the launches api rest",
       link: "https://space-launch-upcoming.netlify.app/",
     },
     es: {
-      img: "images/space-launches.png",
+      img: "/images/space-launches.png",
       title: "Proximos lanzamientos al espacio demo",
       description: "Probando la api de lanzamienteos de cohetes.",
       link: "https://space-launch-upcoming.netlify.app/",
@@ -259,13 +259,13 @@ export const projects: ITranslation<IProject>[] = [
   },
   {
     en: {
-      img: "images/bank-operations.png",
+      img: "/images/bank-operations.png",
       title: "Bank operations CRUD",
       description: "CRUD using the local storage",
       link: "https://bank-operations-crud.netlify.app/",
     },
     es: {
-      img: "images/bank-operations.png",
+      img: "/images/bank-operations.png",
       title: "CRUD de Operaciones bancarias",
       description:
         "Consiste en un pequeño CRUD usando el local storage para almacenar los datos ",
