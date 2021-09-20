@@ -247,7 +247,7 @@ export const projects: ITranslation<IProject>[] = [
     en: {
       img: "images/space-launches.png",
       title: "Upcoming Space Launches",
-      description: "Demo testing de launches api rest",
+      description: "Demo testing the launches api rest",
       link: "https://space-launch-upcoming.netlify.app/",
     },
     es: {
@@ -255,6 +255,21 @@ export const projects: ITranslation<IProject>[] = [
       title: "Proximos lanzamientos al espacio demo",
       description: "Probando la api de lanzamienteos de cohetes.",
       link: "https://space-launch-upcoming.netlify.app/",
+    },
+  },
+  {
+    en: {
+      img: "images/bank-operations.png",
+      title: "Bank operations CRUD",
+      description: "CRUD using the local storage",
+      link: "https://bank-operations-crud.netlify.app/",
+    },
+    es: {
+      img: "images/bank-operations.png",
+      title: "CRUD de Operaciones bancarias",
+      description:
+        "Consiste en un pequeño CRUD usando el local storage para almacenar los datos ",
+      link: "https://bank-operations-crud.netlify.app/",
     },
   },
 ];
