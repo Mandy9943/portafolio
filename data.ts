@@ -245,16 +245,16 @@ export const projects: ITranslation<IProject>[] = [
   },
   {
     en: {
-      img: "images/mapbox.png",
-      title: "Demo de mapbox",
-      description: "Testing the mapbox api.",
-      link: "https://demo-mapa-cuba.netlify.app/",
+      img: "images/space-launches.png",
+      title: "Upcoming Space Launches",
+      description: "Demo testing de launches api rest",
+      link: "https://space-launch-upcoming.netlify.app/",
     },
     es: {
-      img: "images/mapbox.png",
-      title: "Mapbox Demo",
-      description: "Probando un la api de mapbox.",
-      link: "https://demo-mapa-cuba.netlify.app/",
+      img: "images/space-launches.png",
+      title: "Proximos lanzamientos al espacio demo",
+      description: "Probando la api de lanzamienteos de cohetes.",
+      link: "https://space-launch-upcoming.netlify.app/",
     },
   },
 ];
