@@ -259,6 +259,21 @@ export const projects: ITranslation<IProject>[] = [
   },
   {
     en: {
+      img: "/images/Rocke-Paper-Scissors-React-Games.png",
+      title: "Rock, paper or scissors",
+      description: "Game to play against the pc in rock, paper, scissors.",
+      link: "https://react-cesar-rock-paper-scissors.netlify.app/",
+    },
+    es: {
+      img: "/images/Rocke-Paper-Scissors-React-Games.png",
+      title: "Piedra, papel o tijeras",
+      description:
+        "Juego para jugar en contra de la pc de piedra, papel o tijeras. ",
+      link: "https://react-cesar-rock-paper-scissors.netlify.app/",
+    },
+  },
+  {
+    en: {
       img: "/images/bank-operations.png",
       title: "Bank operations CRUD",
       description: "CRUD using the local storage",
