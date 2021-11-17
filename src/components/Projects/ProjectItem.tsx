@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 import { IProject } from "../../types/types";
@@ -13,7 +14,13 @@ const ProjectItem = ({ projetc }: IProps) => {
       <ProjectContainerS>
         <ImageContainerS>
           <Link href={link}>
-            <img src={img} alt={title} />
+            <Image
+              src={img}
+              alt={title}
+              width="710px"
+              height="355px"
+              className="img-project"
+            />
           </Link>
         </ImageContainerS>
         <ContentProjectS>
@@ -34,6 +41,7 @@ export default ProjectItem;
 const ProjetItemS = styled.div`
   flex: 33.33%;
   padding: 30px;
+  max-width: 455px;
   @media (max-width: 1024px) {
     flex: 50%;
   }
@@ -42,8 +50,7 @@ const ProjetItemS = styled.div`
   }
 `;
 const ProjectContainerS = styled.div`
-  border: 1px solid var(--primary);
-  border-radius: 5px;
+  border-radius: 20px;
   box-shadow: 1px 1px 4px var(--dark);
   min-height: 350px;
   background-color: var(--white);
@@ -52,6 +59,10 @@ const ImageContainerS = styled.div`
   max-height: 250px;
   overflow: hidden;
   cursor: pointer;
+  border-radius: 20px 20px 0 0;
+  .img-project {
+    width: 100% !important;
+  }
 
   /* transform: scale(50%); */
   img {

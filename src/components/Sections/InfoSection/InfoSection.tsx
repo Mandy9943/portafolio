@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/dist/client/router";
+import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 import { IPersonalInfo } from "../../../types/types";
@@ -15,7 +16,12 @@ const InfoSection = ({ info }: IProps) => {
   return (
     <InfoSectionS>
       <ImageBox>
-        <img src={info.profileImg} alt={info.name} />
+        <Image
+          src={info.profileImg}
+          alt={info.name}
+          width="646px"
+          height="523px"
+        />
       </ImageBox>
       <InfoBox>
         <BoxSection title={t("personal_info").toString()}>
@@ -51,15 +57,18 @@ const InfoSectionS = styled.div`
 `;
 const ImageBox = styled.div`
   display: flex;
+  justify-content: center;
   flex: 30%;
   /* min-width: 250px; */
   padding: 15px 30px 15px 15px;
+  > div {
+    box-shadow: 1px 1px 5px black !important;
+    border-radius: 40px;
+  }
   img {
     width: 100%;
     /* height: 50px; */
     /* height: max-content; */
-    /* border-radius: 50%; */
-    box-shadow: 1px 1px 5px black;
   }
 `;
 const InfoBox = styled.div`
